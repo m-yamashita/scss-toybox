@@ -3,15 +3,36 @@
   &,
   thead,
   tbody:first-child {
-    > tr:first-child {
-      td,
-      th {
-        &:first-child {
-          border-top-left-radius: $radius;
-        }
+    > tr {
+      &:first-child {
+        td,
+        th {
+          &:first-child {
+            border-top-left-radius: $radius;
+          }
 
-        &:last-child {
-          border-top-right-radius: $radius;
+          &:last-child {
+            border-top-right-radius: $radius;
+          }
+        }
+      }
+    }
+  }
+
+  &,
+  tfoot,
+  tbody:last-child {
+    > tr {
+      &:last-child {
+        td,
+        th {
+          &:first-child {
+            border-bottom-left-radius: $radius;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: $radius;
+          }
         }
       }
     }
@@ -19,6 +40,6 @@
 
   td,
   th {
-    background-clip: padding-box !important;
+    background-clip: padding-box;
   }
 }
